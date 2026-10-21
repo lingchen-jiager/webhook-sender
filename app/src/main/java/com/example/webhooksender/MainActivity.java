@@ -35,6 +35,22 @@ public class MainActivity extends Activity {
         tvResult  = findViewById(R.id.tvResult);
         btnSend   = findViewById(R.id.btnSend);
 
+        findViewById(R.id.btnClearTitle).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                etTitle.setText("");
+                etTitle.requestFocus();
+            }
+        });
+
+        findViewById(R.id.btnClearContent).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                etContent.setText("");
+                etContent.requestFocus();
+            }
+        });
+
         btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
